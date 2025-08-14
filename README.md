@@ -8,7 +8,7 @@ Panduan untuk instalasi dan menjalankan project Laravel 12.
 Buka **CMD/Terminal/GitBash**, arahkan ke folder yang diinginkan, lalu jalankan perintah:
 
 ```bash
-git clone https://github.com/brekele28/project-magang.git
+https://github.com/brekele28/seven-inc-api.git
 cd seven-inc-api
 
 ```
