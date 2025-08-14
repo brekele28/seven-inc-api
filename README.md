@@ -18,7 +18,14 @@ Jalankan perintah berikut untuk menginstall dependency manager untuk PHP yang di
 composer install
 
 ```
-## 3. Konfigurasi File .env
+## 3. Project ini menggunakan Laravel Sanctum untuk autentikasi API.
+Setelah menjalankan composer install, jalankan:
+
+```bash
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+```
+## 4. Konfigurasi File .env
 Laravel menggunakan file .env untuk konfigurasi environment.
 • ubah konfigurasi database menjadi:
 ```bash
@@ -30,19 +37,19 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 ```
-## 4. Generate Application Key
+## 5. Generate Application Key
 
 ```bash
 php artisan key:generate
 
 ```
-## 5. Migrasi Database
+## 6. Migrasi Database
 Jalankan migrasi tabel ke database:
 
 ```bash
 php artisan migrate
 
 ```
-## 6. Jalankan server Laravel:
+## 7. Jalankan server Laravel:
 ```bash
 php artisan serve
