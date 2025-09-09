@@ -9,12 +9,11 @@ return new class extends Migration {
     {
         Schema::create('works', function (Blueprint $table) {
             $table->id();
-            $table->string('heading', 120);      // "Lowongan Kerja"
-            $table->string('title', 255);        // "Berkarir bersama Seven INC."
-            $table->string('subtitle', 500)->nullable(); // "Temukan peluang karir..."
-            $table->string('hero_path')->nullable();     // gambar kanan (disimpan di storage/public)
+            $table->string('heading');
+            $table->text('title');
+            $table->text('subtitle')->nullable();
+            $table->string('hero')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
