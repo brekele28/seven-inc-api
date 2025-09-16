@@ -8,7 +8,7 @@ use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\BisnisKamiFullController;
 use App\Http\Controllers\Api\WorksController;
 use App\Http\Controllers\Api\JobWorksController;
-use App\Http\Controllers\Api\SocialLinkController; // ← tambahkan ini
+use App\Http\Controllers\Api\SocialLinkController;
 
 Route::post('/admin/register', [AdminAuthController::class, 'register']);
 Route::post('/admin/login',    [AdminAuthController::class, 'login']);
@@ -20,9 +20,7 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{idOrSlug}', [NewsController::class, 'show']);
 Route::get('/bisnis-kami-full', [BisnisKamiFullController::class, 'show']);
 Route::get('/works/latest', [WorksController::class, 'latest']);
-
-// (opsional) endpoint publik untuk menampilkan link aktif di landing
-Route::get('/social-links', [SocialLinkController::class, 'publicIndex']); // ← tambahkan
+Route::get('/social-links', [SocialLinkController::class, 'publicIndex']);
 
 // job works CRUD (tetap)
 Route::get('/job-works', [JobWorksController::class, 'index']);
