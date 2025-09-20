@@ -48,8 +48,13 @@ Jalankan migrasi tabel ke database:
 
 ```bash
 php artisan migrate
-
 ```
-## 7. Jalankan server Laravel:
+
+## 7. Wajib untuk menampilkan Gambar
+```bash
+php artisan storage:link
+```
+
+## 8. Jalankan server Laravel:
 ```bash
 php artisan serve
